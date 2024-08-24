@@ -78,4 +78,3 @@ Follow these steps to set up the EBS Translation Backend on your local machine.
 
 **Response:** Backend Running Succesfully.
 
-# ebs.translation.backend
