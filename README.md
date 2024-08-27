@@ -14,11 +14,11 @@ Follow these steps to set up the EBS Translation Backend on your local machine.
      python --version
      ```
 
-2. **Download Flask and install Flask-CORS:**
-   - Install Flask and Flask-CORS:
+2. **Download Python, check the version and install mysql-connector-python:**
+   - Ensure Python is installed,check the version and install mysql-connector-python:
      ```bash
-     pip install Flask
-     pip install Flask-CORS
+     python --version
+     pip install mysql-connector-python
      ```
 
 3. **Clone the GitHub repository containing the backend code:**
@@ -32,8 +32,22 @@ Follow these steps to set up the EBS Translation Backend on your local machine.
      ```bash
      cd ebs.translation.backend
      ```
+6. **Set up the database**
+   - Modify the host,username and password in the code as per the deployed system
+   - Create Database translation
+     ```bash
+     create database translation_db;
+     ```
+   - use translation database
+     ```bash
+     use translation_db;
+     ```
+    - create table translation
+     ```bash
+     CREATE TABLE translation (id INT AUTO_INCREMENT PRIMARY KEY, date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, user VARCHAR(255) NOT NULL DEFAULT 'guest', src CHAR(3), tar CHAR(3), inp LONGTEXT, output LONGTEXT,ipaddress VARCHAR(255));
+     ```
 
-6. **Run the backend code:**
+7. **Run the backend code:**
    - Start the backend server:
      ```bash
      python3 translation.py
