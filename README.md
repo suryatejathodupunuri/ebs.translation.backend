@@ -34,6 +34,9 @@ Follow these steps to set up the EBS Translation Backend on your local machine.
      ```
 6. **Set up the database**
    - Modify the host,username and password in the code as per the deployed system
+     ```bash
+     SELECT current_user();
+     ```
    - Create Database translation
      ```bash
      create database translation_db;
